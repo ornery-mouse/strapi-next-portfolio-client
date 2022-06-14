@@ -59,8 +59,8 @@
 
 .cta {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   flex: 1 1 auto;
 }
 
