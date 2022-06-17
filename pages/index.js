@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
+import Slideshow from "../components/Slideshow"
 import {SiReact, SiGraphql, SiNodedotjs, SiNextdotjs, SiTypescript, SiPython, SiGithub, SiLinkedin, SiLeetcode} from 'react-icons/si'
 import styles from "../styles/Home.module.css"
 
@@ -19,7 +20,7 @@ export default function Home() {
             <div className={styles.hero}>
               <div className={styles.intro}>
                 <div className={styles.slideshow}>
-                  
+                  <Slideshow />
                 </div>
                 <div className={styles.info}>
                     <div className={styles.brand}>
