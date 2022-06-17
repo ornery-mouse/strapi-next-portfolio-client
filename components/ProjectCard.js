@@ -1,18 +1,15 @@
 import styles from '../styles/Projects.module.css'
 import Image from 'next/image'
 
-export default function ProjectCard({project}) {
-
-    const thumbStyle = {
-        backgroundImage: "url('http://localhost:1337/uploads/Screenshot_from_2022_06_12_15_38_52_67803cb249.png?updated_at=2022-06-13T20:17:21.751Z')",
-        backgroundPosition: '50% 50%',
-        height: '100%',
-    }
+export default function ProjectCard({project, setSelectedProject}) {
 
     return (
-        <div className={styles.projectCard}>
-            <div style={thumbStyle}>
+        <div className={styles.projectCard} onClick={() => setSelectedProject(project)}>
+            <div className={styles.projectShort}>
                 <h3>{project.attributes.short}</h3>
+            </div>
+            <div className={styles.projectName}>
+                <h2>{project.attributes.name}</h2>
             </div>
         </div>
     )
