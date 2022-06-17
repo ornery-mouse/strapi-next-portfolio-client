@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Head from "next/head"
 import { useState, useEffect } from 'react'
 import ProjectCard from '../components/ProjectCard'
 import ProjectModal from "../components/ProjectModal"
@@ -30,6 +31,15 @@ export default function Projects(){
 
     return (
         <div className={styles.container}>
+            <Head>
+                <title>Projects</title>
+                <meta
+                    name="description"
+                    content="Cory Sorel's development portfolio"
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
             {selectedProject && <ProjectModal project={selectedProject} setSelectedProject={setSelectedProject}/>}
             <div className={styles.projects}>
                 <div className={styles.cardDisplay}>

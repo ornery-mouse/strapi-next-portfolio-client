@@ -47,7 +47,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+            <div className={styles.footer}>
+              <p>Built with Next.js and Strapi</p>
+            </div>
         </div>
     );
 }
