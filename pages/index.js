@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import {SiReact, SiGraphql, SiNodedotjs, SiNextdotjs, SiTypescript, SiGithub, SiLinkedin, SiLeetcode} from 'react-icons/si'
+import {SiReact, SiGraphql, SiNodedotjs, SiNextdotjs, SiTypescript, SiPython, SiGithub, SiLinkedin, SiLeetcode} from 'react-icons/si'
 import styles from "../styles/Home.module.css"
 
 export default function Home() {
@@ -18,28 +18,30 @@ export default function Home() {
             
             <div className={styles.hero}>
               <div className={styles.intro}>
-                <div className={styles.skills}>
-                  <SiNodedotjs className={styles.icon}/>
-                  <SiReact className={styles.icon}/>
-                  <SiNextdotjs className={styles.icon} />
-                  <SiGraphql className={styles.icon}/>
-                  <SiTypescript className={styles.icon}/>
+                <div className={styles.slideshow}>
+                  
                 </div>
                 <div className={styles.info}>
                     <div className={styles.brand}>
-                        <h3>dev.JS()</h3>
-                        <p>cory sorel</p>
+                        <h3>cory sorel</h3>
+                        <p>software developer</p>
+                        <SiNodedotjs className={styles.icon}/>
+                        <SiTypescript className={styles.icon}/>
+                        <SiReact className={styles.icon}/>
+                        <SiNextdotjs className={styles.icon} />
+                        <SiGraphql className={styles.icon}/>
+                        <SiPython className={styles.icon} />
                     </div>
                     <div className={styles.cta}>
                         <Link href="/projects">
                           See My Work
                         </Link>
-                        <Link href="#">Resume</Link>
+                        <a download href="files/Cory_Sorel_Resume.pdf">Resume</a>
                     </div>
                 </div>
               </div>
               <div className={styles.socialBar}>
-                <p>Junior Developer | Full Stack | Austin, TX</p>
+                
                 <div className={styles.socials}>
                   <SiLeetcode className={styles.socialIcon}/>
                   <SiGithub className={styles.socialIcon}/>
