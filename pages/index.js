@@ -1,11 +1,16 @@
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import Slideshow from "../components/Slideshow"
 import {SiReact, SiGraphql, SiNodedotjs, SiNextdotjs, SiTypescript, SiPython, SiGithub, SiLinkedin, SiLeetcode} from 'react-icons/si'
 import styles from "../styles/Home.module.css"
 
 export default function Home() {
+    
+    const slides = [[
+      "http://localhost:1337/uploads/Project_Thumbs_Pri_Ma_db82911a62.png",
+      "http://localhost:1337/uploads/Project_Thumbs_Grubbr_786cc928e9.png"
+  ]]
+
     return (
         <div className={styles.container}>
             <Head>
@@ -19,19 +24,19 @@ export default function Home() {
             
             <div className={styles.hero}>
               <div className={styles.intro}>
-                <div className={styles.slideshow}>
-                  <Slideshow />
-                </div>
-                <div className={styles.info}>
-                    <div className={styles.brand}>
-                        <h3>cory sorel</h3>
-                        <p>software developer</p>
-                        <SiNodedotjs className={styles.icon}/>
+                <div className={styles.skills}>
+                <SiNodedotjs className={styles.icon}/>
                         <SiTypescript className={styles.icon}/>
                         <SiReact className={styles.icon}/>
                         <SiNextdotjs className={styles.icon} />
                         <SiGraphql className={styles.icon}/>
                         <SiPython className={styles.icon} />
+                </div>
+                <div className={styles.info}>
+                    <div className={styles.brand}>
+                        <h3>cory sorel</h3>
+                        <p>software developer</p>
+                        
                     </div>
                     <div className={styles.cta}>
                         <Link href="/projects">
@@ -44,7 +49,6 @@ export default function Home() {
               <div className={styles.socialBar}>
                 
                 <div className={styles.socials}>
-                  <SiLeetcode className={styles.socialIcon}/>
                   <SiGithub className={styles.socialIcon}/>
                   <SiLinkedin className={styles.socialIcon}/>
                 </div>

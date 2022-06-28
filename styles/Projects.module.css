@@ -1,43 +1,61 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
 .container {
     margin: 0 auto;
     background: rgb(14,13,25);
-  background: linear-gradient(135deg, rgba(14,13,25,1) 0%, rgba(32,31,55,1) 40%, rgba(14,13,25,1) 100%);
+    background: linear-gradient(135deg, rgba(14,13,25,1) 0%, rgba(32,31,55,1) 40%, rgba(14,13,25,1) 100%);
     color: white;
     height: 100vh;
     position: relative;
+    
   }
 
   .projects {
     width: 50%;
-    height: 50%;
+    height: 75%;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
     top: 15%;
     left: 25%;
     position: absolute;
+    animation: fadeIn 1.5s;
   }
 
   .cardDisplay {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    height: 85%;
+    grid-template-columns: repeat(2, 50%);
+    /* height: 85%; */
   }
 
   .projectCard {
       margin: 5px;
-      /* background: blue; */
+      background: rgba(250,255,255,.2);
       text-align: right;
-      border: 1px white solid;
-      /* width: 25%;
-      height: 50%; */
+      cursor: pointer;
+      padding: 10px;
+      height: 200px;
   }
 
   .projectCard h3 {
-    padding-top: 10px;
     margin: 0 10px;
-    font-size: 1rem;
-    
+    font-size: .8rem;
+    font-family: 'Rubik';
+    font-weight: 300;
+    display: inline;
+    animation: fadeIn .5s;
+  }
+
+  .projectCard h2 {
+    font-family: 'Roboto Condensed';
   }
 
   .cardThumb {
@@ -45,8 +63,13 @@
       height: 100%
   }
 
-  .projectShort {
-    height: 50%;
+  .projectShort, .projectShortImage {
+    height: 75%;
+  }
+
+  .projectShortImage {
+    animation: fadeIn .5s;
+    text-align: center;
   }
 
   .projectName {

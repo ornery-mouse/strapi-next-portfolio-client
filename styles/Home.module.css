@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
 .container {
   margin: 0 auto;
   background: rgb(14,13,25);
@@ -15,6 +25,7 @@
   top: 25%;
   left: 30%;
   position: absolute;
+  animation: fadeIn 1s;
 }
 
 .intro {
@@ -22,7 +33,7 @@
   height: 100%;
 }
 
-.slideshow {
+.skills {
   display: flex;
   flex-wrap: wrap;
   width: 50%;
@@ -37,16 +48,19 @@
 
 .brand {
   flex: 0 1 auto;
+  font-family: 'Rubik';
 }
 
 .brand h3 {
   margin-top: 0px;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: 'Rubik';
 }
 
 .brand p {
   margin-top: -50px;
   font-size: 2rem;
+  font-weight: 300;
 }
 
 .icon, .socialIcon {
@@ -54,7 +68,7 @@
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 4rem;
   margin: 15px 10px;
 }
 
@@ -64,6 +78,10 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex: 1 1 auto;
+}
+
+.cta a {
+  margin-top: 10px;
 }
 
 .socialBar {
